@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const bodyPaser = require('body-parser');
-const session = require('express-session');
 const passport = require('passport');
 const localStrategy = require('passport-local').Strategy
 const database = require('./api/db');
@@ -71,8 +70,4 @@ app.use(function (req, res) {
     res.status(404).send({url: req.originalUrl + 'not found'});
 })
 
-app.listen(port, function () {
-    console.log('Server is listening on port: ' + port);
-});
-
-// module.exports = app;
+module.exports = app;

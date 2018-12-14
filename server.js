@@ -6,9 +6,6 @@ const passport = require('passport');
 const localStrategy = require('passport-local').Strategy
 const database = require('./api/db');
 
-
-require('dotenv').load();
-
 app.set('views', './views');
 app.set('view engine', 'ejs');
 

@@ -6,7 +6,6 @@ const passport = require('passport');
 const localStrategy = require('passport-local').Strategy
 const database = require('./api/db');
 
-
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
@@ -15,6 +14,7 @@ const port = process.env.PORT | 3000;
 app.use(bodyPaser({extended: true}));
 
 app.use(bodyPaser.urlencoded({extended: true}));
+app.use(session({secret: "mysecret"}))
 app.use(bodyPaser.json());
 app.use(passport.initialize());
 app.use(passport.session())
@@ -74,5 +74,3 @@ app.use(function (req, res) {
 app.listen(port, function () {
     console.log('Server is listening on port: ' + port);
 });
-
-// module.exports = app;

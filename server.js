@@ -9,7 +9,7 @@ const database = require('./api/db');
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
-const port = process.env.PORT | 3000;
+const port = process.env.PORT || 3000;
 
 app.use(bodyPaser({extended: true}));
 

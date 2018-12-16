@@ -7,13 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
+    <style>
+        body{
+            background: darkcyan;
+        }
+        .GetQuestion  {
+            background: gold;
+            color: red;
+            width: 200px;
+            height: 30px;
+            border: 2px solid #cc0000;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            border-radius: 10px;
+            
+        }
+        h3{
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <a href="/questions">
-        <button name="btn_questions" type="button">GetQuestion</button>
-    </a><br>
-    <a href="/fullQuestions">
-        <button name="btn_full_question" type="button">GetFullQuestion</button>
-    </a>
+        <div class="content">
+                <div class="insert">
+                <h3 align="center">SERVER HOME</h3>
+                <form  method="POST" >
+                <table width="400" border="0" align="center">
+                    
+                            <td > 
+                                <a href="/questions">
+                                    <button class="GetQuestion" name="btn_questions" type="button">GetQuestion</button>
+                                </a>
+                             </td>
+              
+                      
+                            <td >
+                                <a href="/fullQuestions">
+                                    <button  class="GetQuestion" name="btn_full_question" type="button">GetFullQuestion</button>
+                                </a>
+                            </td>
+                       
+                </table>
+                
+                </form>
+                </div>
+            </div>
+   
+    
 </body>
 </html>

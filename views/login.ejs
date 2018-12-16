@@ -1,101 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<title>Login</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hoc Lai Xe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="main.css"/>
+	<script src="main.js"></script>
+	<style>
+	body{
+		border-block-end: aqua;
+		background: darkcyan;
+		background-position: center;
+	}
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	.content{
+		width: 400px;
+		margin: 0px auto;
+	}
+	.insert{
+			width: 400px;
+			border: 1px solid #dddddd;
+			margin-top:60px;
+			
+		}
+	.insert h3{
+		background: gold;
+		padding: 5px;
+		color:red;
+		text-align: center;
+		border: 2px solid #cc0000;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            border-radius: 10px;
+		}
+
+	.insert form table tr td{
+			padding: 3px 5px;
+		}
+	.insert form table tr td input{
+			padding: 3px 5px;
+			border: 2px solid #cc0000;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            border-radius: 10px;
+		}
+	.insert form table tr td p{
+			color: red;
+		}
+	.login{
+			width:70px;
+			height: 25px;
+			color: red;
+			background: gold;
+			border: 2px solid #cc0000;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            border-radius: 10px;
+			
+		}
+	</style>
 </head>
 <body>
-	
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<div class="login100-pic js-tilt" data-tilt>
-					<img src="images/img-01.png" alt="IMG">
-				</div>
-
-				<form class="login100-form validate-form" method="POST" action="/login" >
-					<span class="login100-form-title">
-						Admin Login
-					</span>
-
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="username" placeholder="Email">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
-						</span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="password" placeholder="Password">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-					</div>
+   
+<div class="content" border="0">
+    <div class="insert" border="0">
+	<h3 align="center">SERVER LOGIN</h3>
+    <form  action="/login" method="POST" >
+    <table width="400" border="0" align="center">
+		
+			
+			<td>
+				<table border="0">
+					<tr>
+						<td><p>UserName:</p></td>
+						<td><input type="text" placeholder="UserName" name="username"></td>
+						
+					</tr>
+					<tr>
+						<td><p>Password:</p></td>
+						<td ><input  type="password" placeholder="Password" name="password"></td>
+					</tr>
 					
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
-						</button>
-					</div>
-
-					<div class="text-center p-t-12">
-						<span class="txt1">
-							Forgot
-						</span>
-						<a class="txt2" href="#">
-							Username / Password?
-						</a>
-					</div>
-
-					<div class="text-center p-t-136">
-						<a class="txt2" href="#">
-							Create your Account
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-						</a>
-					</div>
-				</form>
-			</div>
-		</div>
+				</table>
+			</td>
+			<tr >
+					<td align="center"><input class="login" type="submit" name="submit" value="Login" ></td>
+			</tr>
+	</table>
+	
+    </form>
 	</div>
-	
-	
-
-	
-<!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/tilt/tilt.jquery.min.js"></script>
-	<script >
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
-
+</div>
+   
 </body>
 </html>

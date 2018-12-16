@@ -22,6 +22,8 @@ app.use(passport.session())
 let routes = require("./api/routes");
 routes(app);
 
+app.use('/images', express.static('images'));
+
 app.get('/', (req, res) => res.render('index'));
 
 app.route('/login').get((req, res) => res.render('login'))

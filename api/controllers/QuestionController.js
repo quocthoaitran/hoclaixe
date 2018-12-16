@@ -35,11 +35,11 @@ module.exports = {
             res.json(response[0]);
         })
     },
-    delete: (req, res) => {
-        let sql = 'DELETE FROM question WHERE id = ?';
-        db.query(sql, [req.params.questionId], (err, response) => {
+    getSign: (req, res) => {
+        let sql = 'SELECT * FROM sign WHERE SIGNCATEGORY = ? ';
+        db.query(sql, [req.params.signCategory], (err, data) => {
             if(err) throw err;
-            res.json({ message: 'Delete success!'});
-        })
+            res.json(data);
+        });
     }
 }

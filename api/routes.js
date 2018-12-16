@@ -9,5 +9,6 @@
          }
      }).get(questionCtrl.get);
      app.route('/fullQuestions').get(questionCtrl.getFull);
-     app.route('/questions/:questionId').get(questionCtrl.detail).delete(questionCtrl.delete);
+     app.route('/questions/:questionId').get(questionCtrl.detail);
+     app.route('/sign/:signCategory').get(questionCtrl.getSign);
  }

@@ -14,7 +14,7 @@ const port = process.env.PORT || 3000;
 app.use(bodyPaser({extended: true}));
 
 app.use(bodyPaser.urlencoded({extended: true}));
-app.use(session({secret: "mysecret"}))
+app.use(session({secret: "secret"}))
 app.use(bodyPaser.json());
 app.use(passport.initialize());
 app.use(passport.session())
@@ -24,7 +24,7 @@ routes(app);
 
 app.use('/images', express.static('images'));
 
-app.get('/', (req, res) => res.render('index'));
+app.get('/', (req, res) => res.render('login'));
 
 app.route('/login').get((req, res) => res.render('login'))
     .post(passport.authenticate('local', {failureRedirect: '/login',
@@ -35,6 +35,10 @@ app.get('/home', (req, res) => {
     }else{
         res.redirect('/login');
     }
+})
+
+app.get('/signs', (req, res) => {
+    res.render('signs');
 })
 
 passport.use(new localStrategy(
